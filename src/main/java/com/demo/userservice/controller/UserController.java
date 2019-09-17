@@ -10,7 +10,7 @@ public class UserController {
 	@GetMapping("/user/product")
 	public Product getProduct() {
 		RestTemplate restTemplate = new RestTemplate();
-		return restTemplate.getForObject("http://localhost:9090/product", Product.class);
+		return restTemplate.getForObject("http://product-service-deployment.default.svc.cluster.local/product", Product.class);
 	}
 
 }
