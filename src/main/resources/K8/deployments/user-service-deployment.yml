@@ -14,4 +14,11 @@ spec:
          - name: product-service-app
            image: gcr.io/practice-239003/user-service
            ports:
+           - name: spring-boot-port
            - containerPort: 8080
+           livenessProbe:
+            httpGet:
+                path: /user/product
+                port: spring-boot-port
+            initialDelaySeconds: 15
+            timeoutSeconds: 30
