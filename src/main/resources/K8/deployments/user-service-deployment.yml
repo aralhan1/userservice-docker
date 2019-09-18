@@ -15,7 +15,7 @@ spec:
            image: gcr.io/practice-239003/user-service
            ports:
            - name: spring-boot-port
-           - containerPort: 8080
+             containerPort: 8080
            livenessProbe:
             httpGet:
                 path: /user/product
