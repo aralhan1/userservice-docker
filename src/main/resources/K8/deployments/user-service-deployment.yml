@@ -19,6 +19,6 @@ spec:
            livenessProbe:
             httpGet:
                 path: /user/product
-                port: spring-boot-port
+                port: spring-port
             initialDelaySeconds: 15
             timeoutSeconds: 30
